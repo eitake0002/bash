@@ -60,6 +60,9 @@ function count(){
     sleep 1
   done
 }
+function fin() {
+  find ./ -type f -print | xargs grep $1
+}
 
 ##### PYTHON #####
 alias jango='cd /home/ec2-user/py/'
