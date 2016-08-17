@@ -7,11 +7,25 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
+PATH=$PATH:$HOME/bin
+
 export PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
-export GOPATH=$HOME/go_program
 eval "$(rbenv init -)"
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
+export PATH
+#export PATH="$HOME/.rbenv/bin:$PATH"
+export GOPATH=$HOME/go_program
+#eval "$(rbenv init -)"
 
 export RAILS_ENV=development
 export RAILS_APP=/home/ec2-user/autopost/current
@@ -63,6 +77,13 @@ function count(){
 function fin() {
   find ./ -type f -print | xargs grep $1
 }
+alias sql='cd /home/vagrant/bash_profile/mysql'
+
+##### MySQL #####
+alias showdbs="mysql -u root -e 'show databases;'"
+function showtables(){
+  mysql -u root $1 -e 'show tables;'
+}
 
 ##### PYTHON #####
 alias jango='cd /home/ec2-user/py/'
@@ -86,3 +107,24 @@ export HADOOP_HOME=/usr/hadoop-2.7.1
 export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$JAVA_HOME/bin:$PATH
 
 alias hd='cd /usr/hadoop-2.7.1/'
+
+##### Clorets vagrant #####
+alias clo='cd /home/vagrant/clorets-ar'
+alias cloex='cd /home/vagrant/clorets-excalibur'
+alias conts='cd /home/vagrant/clorets-ar/app/controllers'
+alias contsex='cd /home/vagrant/clorets-excalibur/app/controllers'
+rbenv shell 2.3.1
+function runwebrick(){
+  cd /home/vagrant/clorets-ar
+  #cd /home/vagrant/myapp2
+  rails s -b 0.0.0.0
+}
+alias config='cd /home/vagrant/clorets-ar/config/'
+alias configex='cd /home/vagrant/clorets-excalibur/config/'
+#alias config='cd /home/vagrant/myapp/config'
+#alias config='cd /home/vagrant/myapp2/config'
+#alias myapp='cd /home/vagrant/myapp'
+#alias myapp='cd /home/vagrant/myapp2'
+##### Git, git #####
+git config --global color.ui true
+
