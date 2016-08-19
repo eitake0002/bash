@@ -6,32 +6,21 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-
 PATH=$PATH:$HOME/bin
-
 export PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-# .bash_profile
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
-export PATH
-#export PATH="$HOME/.rbenv/bin:$PATH"
+##### Go settings#####
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
 export GOPATH=$HOME/go_program
-#eval "$(rbenv init -)"
 
+##### Rails settings #####
 export RAILS_ENV=development
 export RAILS_APP=/home/ec2-user/autopost/current
 export MECAB_PATH=/usr/lib64/libmecab.so.2
 
-# Set original aliases.
+##### Autopost settings #####
 alias app='cd /home/ec2-user/autopost/current/'
 alias config='cd /home/ec2-user/autopost/current/config'
 alias conts='cd /home/ec2-user/autopost/current/app/controllers/'
@@ -41,7 +30,6 @@ alias migrate='cd /home/ec2-user/autopost/current/db/migrate/'
 alias lib='cd /home/ec2-user/autopost/current/lib/'
 alias log='cd /home/ec2-user/autopost/current/log/'
 alias spec='cd /home/ec2-user/autopost/current/spec/'
-#alias tools='cd /home/ec2-user/autopost/current/tools/'
 alias uni='cd /home/ec2-user/autopost/current/tools/unicorn/;sh unicorn.sh stop; sh unicorn.sh start'
 alias gg='cd /home/ec2-user/gg/'
 alias css='cd /home/ec2-user/autopost/current/app/assets/stylesheets'
@@ -61,9 +49,11 @@ alias mg='cd /home/ec2-user/go_program/src/mongo'
 alias cr='cd /home/ec2-user/go_program/src/crawler'
 alias cl='cd /home/ec2-user/clang/'
 alias py='cd /home/ec2-user/py'
+
+##### Prompt setting #####
 PS1='ec-dev \W$ '
 
-##### UTIL  #####
+##### UTILS #####
 alias sr='source ~/.bash_profile'
 alias global='curl inet-ip.info'
 alias bashedit='vim ~/.bash_profile'
@@ -86,28 +76,29 @@ function showtables(){
   mysql -u root $1 -e 'show tables;'
 }
 
-##### Python #####
+##### Django #####
 alias jango='cd /home/ec2-user/py/'
 alias jango-version='python -c "import django; print(django.get_version())"'
 alias runjango='cd /home/ec2-user/py/; python manage.py runserver 0.0.0.0:8000 &'
-alias ju='cd /home/ec2-user/py/autopost/jupyter'
-alias runju='cd /home/ec2-user/py/autopost/jupyter; jupyter notebook &'
-alias auto='cd /home/ec2-user/py/autopost'
-alias com='cd /home/ec2-user/py/autopost/management/commands'
 alias debugsql='cd /home/ec2-user/py/; python manage.py debugsqlshell'
-alias tools='cd /home/ec2-user/py/tools'
-alias rds='cd /home/ec2-user/py/tools/mysql'
-#alias when you want to sync change to db. python manage.py migrate --run-syncdb
-alias mig='cd /home/ec2-user/py/autopost/migrations;'
-# Create super user on django admin.
-# python manage.py createsuperuser
+alias create-super-user='python manage.py createsuperuser'
 alias api='cd /home/ec2-user/py/mysite/api;'
 alias mysite='cd /home/ec2-user/py/mysite/mysite/'
+alias mig='cd /home/ec2-user/py/autopost/migrations;'
+
+##### Jupyter #####
+alias ju='cd /home/ec2-user/py/autopost/jupyter'
+alias runju='cd /home/ec2-user/py/autopost/jupyter; jupyter notebook &'
+
+#### Python ####
+alias auto='cd /home/ec2-user/py/autopost'
+alias com='cd /home/ec2-user/py/autopost/management/commands'
+alias tools='cd /home/ec2-user/py/tools'
+alias rds='cd /home/ec2-user/py/tools/mysql'
 
 ##### Hadoop #####
 export HADOOP_HOME=/usr/hadoop-2.7.1
 export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$JAVA_HOME/bin:$PATH
-
 alias hd='cd /usr/hadoop-2.7.1/'
 
 ##### Clorets vagrant #####
@@ -118,15 +109,11 @@ alias contsex='cd /home/vagrant/clorets-excalibur/app/controllers'
 rbenv shell 2.3.1
 function runwebrick(){
   cd /home/vagrant/clorets-ar
-  #cd /home/vagrant/myapp2
   rails s -b 0.0.0.0
 }
 alias config='cd /home/vagrant/clorets-ar/config/'
 alias configex='cd /home/vagrant/clorets-excalibur/config/'
-#alias config='cd /home/vagrant/myapp/config'
-#alias config='cd /home/vagrant/myapp2/config'
-#alias myapp='cd /home/vagrant/myapp'
-#alias myapp='cd /home/vagrant/myapp2'
-##### Git, git #####
+
+##### Git #####
 git config --global color.ui true
 
