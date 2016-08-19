@@ -78,6 +78,7 @@ function fin() {
   find ./ -type f -print | xargs grep $1
 }
 alias sql='cd /home/vagrant/bash_profile/mysql'
+alias killju='pgrep jupyter | xargs kill -9'
 
 ##### MySQL #####
 alias showdbs="mysql -u root -e 'show databases;'"
@@ -85,8 +86,9 @@ function showtables(){
   mysql -u root $1 -e 'show tables;'
 }
 
-##### PYTHON #####
+##### Python #####
 alias jango='cd /home/ec2-user/py/'
+alias jango-version='python -c "import django; print(django.get_version())"'
 alias runjango='cd /home/ec2-user/py/; python manage.py runserver 0.0.0.0:8000 &'
 alias ju='cd /home/ec2-user/py/autopost/jupyter'
 alias runju='cd /home/ec2-user/py/autopost/jupyter; jupyter notebook &'
