@@ -103,6 +103,7 @@ alias hd='cd /usr/hadoop-2.7.1/'
 
 ##### Clorets vagrant #####
 alias clo='cd /home/vagrant/clorets-ar'
+alias app='cd /home/vagrant/clorets-ar'
 alias cloex='cd /home/vagrant/clorets-excalibur'
 alias conts='cd /home/vagrant/clorets-ar/app/controllers'
 alias contsex='cd /home/vagrant/clorets-excalibur/app/controllers'
