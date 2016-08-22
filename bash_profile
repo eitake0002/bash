@@ -114,6 +114,10 @@ function runwebrick(){
   cd /home/vagrant/clorets-ar
   rails s -b 0.0.0.0
 }
+function show-vote-data() {
+  mysql -u root clorets_ar_dev -e 'select * from neta_movies'
+  mysql -u root clorets_ar_dev -e 'select * from neta_votes'
+}
 alias config='cd /home/vagrant/clorets-ar/config/'
 alias configex='cd /home/vagrant/clorets-excalibur/config/'
 alias spec='cd /home/vagrant/clorets-ar/spec'
