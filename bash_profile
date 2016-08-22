@@ -108,6 +108,7 @@ alias cloex='cd /home/vagrant/clorets-excalibur'
 alias conts='cd /home/vagrant/clorets-ar/app/controllers'
 alias contsex='cd /home/vagrant/clorets-excalibur/app/controllers'
 alias api='cd /home/vagrant/clorets-ar/app/controllers/api'
+alias models='cd /home/vagrant/clorets-ar/app/models'
 rbenv shell 2.3.1
 function runwebrick(){
   cd /home/vagrant/clorets-ar
