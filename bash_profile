@@ -116,6 +116,7 @@ function runwebrick(){
 }
 alias config='cd /home/vagrant/clorets-ar/config/'
 alias configex='cd /home/vagrant/clorets-excalibur/config/'
+alias spec='cd /home/vagrant/clorets-ar/spec'
 
 alias runwebrick='cd /home/vagrant/clorets-ar; bundle exec rails s -b 0.0.0.0'
 alias runwebrickbg='cd /home/vagrant/clorets-ar; bundle exec rails s -b 0.0.0.0 &'
