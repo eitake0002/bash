@@ -87,7 +87,7 @@ alias debugsql='cd /home/ec2-user/py/; python manage.py debugsqlshell'
 alias create-super-user='python manage.py createsuperuser'
 alias api='cd /home/ec2-user/py/mysite/api;'
 alias mysite='cd /home/ec2-user/py/mysite/mysite/'
-alias mig='cd /home/ec2-user/py/autopost/migrations/'
+alias mig='cd /home/ec2-user/py/autopost/migrate/'
 
 ##### Jupyter #####
 alias ju='cd /home/ec2-user/py/autopost/jupyter'
@@ -121,6 +121,12 @@ function runwebrick(){
 function show-vote-data() {
   mysql -u root clorets_ar_dev -e 'select * from neta_movies'
   mysql -u root clorets_ar_dev -e 'select * from neta_votes'
+}
+function desc-tables(){
+  mysql -u root clorets_ar_dev -e 'desc neta_movies'
+  mysql -u root clorets_ar_dev -e 'desc neta_votes'
+  mysql -u root clorets_ar_dev -e 'desc secret_live_applies'
+  mysql -u root clorets_ar_dev -e 'desc trophy_applies' 
 }
 alias config='cd /home/vagrant/clorets-ar/config/'
 alias configex='cd /home/vagrant/clorets-excalibur/config/'
