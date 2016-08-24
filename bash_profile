@@ -51,12 +51,15 @@ alias cl='cd /home/ec2-user/clang/'
 alias py='cd /home/ec2-user/py'
 
 ##### Prompt setting #####
-PS1='ec-dev \W$ '
+host_name=`hostname`
+PS1="${host_name} \W$ "
 
 ##### UTILS #####
 alias sr='source ~/.bash_profile'
 alias global='curl inet-ip.info'
 alias bashedit='vim ~/.bash_profile'
+alias bs='cd /home/vagrant/bash_profile'
+alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
 function count(){
   while [ 1 == 1 ]
   do
