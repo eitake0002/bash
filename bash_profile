@@ -87,7 +87,7 @@ alias debugsql='cd /home/ec2-user/py/; python manage.py debugsqlshell'
 alias create-super-user='python manage.py createsuperuser'
 alias api='cd /home/ec2-user/py/mysite/api;'
 alias mysite='cd /home/ec2-user/py/mysite/mysite/'
-alias mig='cd /home/ec2-user/py/autopost/migrations;'
+alias mig='cd /home/ec2-user/py/autopost/migrations/'
 
 ##### Jupyter #####
 alias ju='cd /home/ec2-user/py/autopost/jupyter'
@@ -112,6 +112,7 @@ alias conts='cd /home/vagrant/clorets-ar/app/controllers'
 alias contsex='cd /home/vagrant/clorets-excalibur/app/controllers'
 alias api='cd /home/vagrant/clorets-ar/app/controllers/api'
 alias models='cd /home/vagrant/clorets-ar/app/models'
+alias mig='cd /home/vagrant/clorets-ar/db/migrate'
 rbenv shell 2.3.1
 function runwebrick(){
   cd /home/vagrant/clorets-ar
