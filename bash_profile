@@ -91,7 +91,7 @@ alias mig='cd /home/ec2-user/py/autopost/migrate/'
 
 ##### Jupyter #####
 alias ju='cd /home/ec2-user/py/autopost/jupyter'
-alias runju='cd /home/ec2-user/py/autopost/jupyter; jupyter notebook &'
+alias runju='cd /home/ec2-user/py/autopost/jupyter; jupyter notebook --debug > jupyter_log.log 2>&1 &'
 
 #### Python ####
 alias auto='cd /home/ec2-user/py/autopost'
