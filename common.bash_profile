@@ -1,4 +1,4 @@
-# .bash_profile
+#!/bin/sh
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
@@ -55,10 +55,10 @@ host_name=`hostname`
 PS1="${host_name} \W$ "
 
 ##### UTILS #####
-alias sr='source ~/.bash_profile'
+alias sr='cd; source ~/.bash_profile'
 alias global='curl inet-ip.info'
 alias bashedit='vim ~/.bash_profile'
-alias bs='cd /home/vagrant/bash_profile'
+alias bs='cd ~/bash_profile'
 alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
 function count(){
   while [ 1 == 1 ]
