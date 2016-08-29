@@ -10,12 +10,19 @@ host_name=`hostname`
 PS1="${host_name} \W$ "
 
 ##### UTILS #####
+
+# bash utils. 
 alias sr='cd; source ~/.bash_profile'
-alias global  ='curl inet-ip.info'
 alias bashedit='vim ~/.bash_profile'
 alias bashedit-com='vim ~/bash_profile/common.bash_profile'
+alias bashedit-clo='vim ~/bash_profile/clorets.bash_profile'
 alias bs='cd ~/bash_profile'
 alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
+
+# network. 
+alias global='curl inet-ip.info'
+
+# sleep count. 
 function count(){
   while [ 1 == 1 ]
   do
@@ -23,6 +30,8 @@ function count(){
     sleep 1
   done
 }
+
+# search. 
 function fin() {
   find ./ -type f -print | xargs grep $1
 }
