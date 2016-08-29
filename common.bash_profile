@@ -12,7 +12,7 @@ PS1="${host_name} \W$ "
 ##### UTILS #####
 
 # bash utils. 
-alias sr='cd; source ~/.bash_profile'
+alias sr='cd ~; source ~/.bash_profile'
 alias bashedit='vim ~/.bash_profile'
 alias bashedit-com='vim ~/bash_profile/common.bash_profile'
 alias bashedit-clo='vim ~/bash_profile/clorets.bash_profile'
