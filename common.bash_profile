@@ -11,7 +11,7 @@ PS1="${host_name} \W$ "
 
 ##### UTILS #####
 alias sr='cd; source ~/.bash_profile'
-alias global='curl inet-ip.info'
+alias global  ='curl inet-ip.info'
 alias bashedit='vim ~/.bash_profile'
 alias bashedit-com='vim ~/bash_profile/common.bash_profile'
 alias bs='cd ~/bash_profile'
