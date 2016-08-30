@@ -59,6 +59,7 @@ alias models-ex='cd /home/vagrant/clorets-excalibur/app/models'
 # others. 
 alias mig='cd /home/vagrant/clorets-ar/db/migrate'
 alias sc='cd /home/vagrant/clorets-ar/script'
+alias dep='cd ~/clorets-ar/config/deploy'
 
 # vim aliases
 alias vim-tro-con='vim /home/vagrant/clorets-ar/app/controllers/site/trophy/subscriber_controller.rb'
@@ -66,7 +67,7 @@ alias vim-se-con='vim /home/vagrant/clorets-ar/app/controllers/site/secret_live/
 alias vim-seed='vim ~/clorets-ar/db/seeds.rb'
 alias config='cd /home/vagrant/clorets-ar/config/'
 alias config-ex='cd /home/vagrant/clorets-excalibur/config/'
-alias loc='cd /home/vagrant/clorets-ar/config/locale' 
+alias loc='cd /home/vagrant/clorets-ar/config/locales' 
 alias spec='cd /home/vagrant/clorets-ar/spec'
 alias tools='cd /home/vagrant/clorets-ar/tools'
 alias lib='cd /home/vagrant/clorets-ar/lib'
