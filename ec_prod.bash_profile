@@ -22,6 +22,7 @@ alias css='cd /home/ec2-user/autopost/current/app/assets/stylesheets'
 
 alias lib='cd /home/ec2-user/autopost/current/lib'
 alias amazon='cd ~/autopost/current/lib/amazon'
+alias crawl='cd ~/autopost/current/lib/crawler'
 
 alias config='cd /home/ec2-user/autopost/current/config'
 alias mig='cd /home/ec2-user/autopost/current/db/migrate/'
