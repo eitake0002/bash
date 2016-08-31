@@ -40,15 +40,7 @@ alias stamp='cd /home/ec2-user/stamp_template/stamp-v1/stamp-html/gradient-bg/6-
 alias admin='cd /home/ec2-user/autopost/current/app/admin/'
 alias spec='cd /home/ec2-user/autopost/current/spec'
 alias ipadic='cd /usr/lib64/mecab/dic/ipadic/'
-alias emr='cd /home/ec2-user/emr/'
-alias gogo='cd /home/ec2-user/go_program/'
-alias jango='cd /home/ec2-user/django/mybook'
-alias si='cd /home/ec2-user/sibyl/'
-alias src='cd /home/ec2-user/go_program/src'
-alias mg='cd /home/ec2-user/go_program/src/mongo'
-alias cr='cd /home/ec2-user/go_program/src/crawler'
-alias cl='cd /home/ec2-user/clang/'
-alias py='cd /home/ec2-user/py'
+alias ec-tools='cd /home/ec2-user/autopost/current/tools'
 
 ##### Prompt setting #####
 host_name=`hostname`
