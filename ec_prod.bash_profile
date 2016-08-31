@@ -5,7 +5,11 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# EC Prod Rails aliases. 
+# AWS keys
+export AWS_ACCESS_KEY_ID='AKIAIM2VA2DY252774HA'
+export AWS_SECRET_ACCESS_KEY='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'
+
+# EC Prod Rails aliases.
 alias app='cd /home/ec2-user/autopost/current'
 
 alias conts='cd /home/ec2-user/autopost/current/app/controllers/'
@@ -17,10 +21,13 @@ alias js='cd /home/ec2-user/autopost/current/app/assets/javascripts'
 alias css='cd /home/ec2-user/autopost/current/app/assets/stylesheets'
 
 alias lib='cd /home/ec2-user/autopost/current/lib'
+alias amazon='cd ~/autopost/current/lib/amazon'
+
 alias config='cd /home/ec2-user/autopost/current/config'
-alias migrate='cd /home/ec2-user/autopost/current/db/migrate/'
+alias mig='cd /home/ec2-user/autopost/current/db/migrate/'
 alias tools='cd /home/ec2-user/autopost/current/tools/'
 alias log='cd /home/ec2-user/autopost/current/log'
+alias data='cd ~/autopost/current/data'
 
 alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
 
