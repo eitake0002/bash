@@ -59,7 +59,7 @@ export RAILS_APP=/home/ec2-user/autopost/current
 export MECAB_PATH=/usr/lib64/libmecab.so.2
 
 ##### MySQL #####
-alias showdbs="mysql -u root -e 'show databases;'"
+alias show-dbs="mysql -u root -e 'show databases;'"
 function showtables(){
   mysql -u root $1 -e 'show tables;'
 }
