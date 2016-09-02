@@ -63,6 +63,7 @@ alias models-ex='cd /home/vagrant/clorets-excalibur/app/models'
 alias spec-models='cd ~/clorets-ar/spec/models'
 alias spec-api='cd ~/clorets-ar/spec/controllers/api'
 alias spec-conts='cd ~/clorets-ar/spec/controllers/'
+alias spec-lib='cd ~/clorets-ar/spec/lib'
 
 # others. 
 alias mig='cd /home/vagrant/clorets-ar/db/migrate'
@@ -104,7 +105,7 @@ function show-tro-data(){
 function show-tro-data-count(){
   mysql -u root clorets_ar_dev -e 'select count(*) from trophies'
 }
-function show-secret-data(){
+function show-se-data(){
   mysql -u root clorets_ar_dev -e 'select * from secret_lives\G'
 }
 function desc-tables(){
