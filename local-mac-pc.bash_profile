@@ -1,7 +1,6 @@
 
 # UTILS
 alias ll='ls -la'
-alias sr='source /Users/b-engineer-takeuchi/.bash_profile'
 
 # Vagrant 
 alias vag='cd /Users/b-engineer-takeuchi/Vagrant/CentOS65'
