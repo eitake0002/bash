@@ -31,6 +31,9 @@ alias bashedit-ec='vim ~/bash_profile/ec_prod.bash_profile'
 alias bs='cd ~/bash_profile'
 alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
 
+# ssh
+alias vim-ssh-conf='vim ~/.ssh/config'
+
 # network. 
 alias global='curl inet-ip.info'
 

@@ -25,13 +25,18 @@ alias amazon='cd ~/autopost/current/lib/amazon'
 alias crawler='cd ~/autopost/current/lib/crawler'
 alias scraper='cd ~/autopost/current/lib/scraper'
 
+# Others
 alias config='cd /home/ec2-user/autopost/current/config'
 alias mig='cd /home/ec2-user/autopost/current/db/migrate/'
 alias tools='cd /home/ec2-user/autopost/current/tools/'
 alias log='cd /home/ec2-user/autopost/current/log'
 alias data='cd ~/autopost/current/data'
+alias spec='cd ~/autopost/current/spec'
 
 alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
+
+# Log 
+alias vim-ng-access-log='vim /var/log/nginx/access.log'
 
 # MySQL
 function show-tables(){
