@@ -31,7 +31,10 @@ alias mig='cd /home/ec2-user/autopost/current/db/migrate/'
 alias tools='cd /home/ec2-user/autopost/current/tools/'
 alias log='cd /home/ec2-user/autopost/current/log'
 alias data='cd ~/autopost/current/data'
+
+# Spec
 alias spec='cd ~/autopost/current/spec'
+alias spec-lib='cd ~/autopost/current/spec/lib'
 
 alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
 
