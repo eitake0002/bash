@@ -33,6 +33,7 @@ alias bs='cd ~/bash_profile'
 alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
 alias ll='ls -la --color=auto'
 alias grep='grep --color'
+alias awk-tools='cd ~/bash_profile/awk_tools'
 
 # ssh
 alias vim-ssh-conf='vim ~/.ssh/config'
