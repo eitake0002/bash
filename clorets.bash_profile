@@ -83,10 +83,14 @@ alias lib='cd /home/vagrant/clorets-ar/lib'
 alias vim-tro-con='vim /home/vagrant/clorets-ar/app/controllers/site/trophy/subscriber_controller.rb'
 alias vim-se-con='vim /home/vagrant/clorets-ar/app/controllers/site/secret_live/subscriber_controller.rb'
 alias vim-seed='vim ~/clorets-ar/db/seeds.rb'
+alias vim-car='vim /home/vagrant/clorets-ar/config/initializers/carrierwave.rb'
 
 # Web server
 alias run-webrick='cd /home/vagrant/clorets-ar; bundle exec rails s -b 0.0.0.0'
 alias run-webrick-bg='cd /home/vagrant/clorets-ar; bundle exec rails s -b 0.0.0.0 &'
+function kill-job(){
+  kill -9 "%$1"
+}
 function runwebrick(){
   cd /home/vagrant/clorets-ar
   rails s -b 0.0.0.0
@@ -105,8 +109,14 @@ function show-tro-data(){
 function show-tro-data-count(){
   mysql -u root clorets_ar_dev -e 'select count(*) from trophies'
 }
+function del-tro-data(){
+  mysql -u root clorets_ar_dev -e 'delete from trophies'
+}
 function show-se-data(){
   mysql -u root clorets_ar_dev -e 'select * from secret_lives\G'
+}
+function del-se-data(){
+  mysql -u root clorets_ar_dev -e 'delete from secret_lives'
 }
 function desc-tables(){
   mysql -u root clorets_ar_dev -e 'desc neta_movies'

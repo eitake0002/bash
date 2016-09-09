@@ -37,7 +37,7 @@ alias grep='grep --color'
 alias awk-tools='cd ~/bash_profile/awk_tools'
 
 # ssh
-alias vim-ssh-conf='vim ~/.ssh/config'
+alias ssh-config='vim ~/.ssh/config'
 
 # network. 
 alias global='curl inet-ip.info'

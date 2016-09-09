@@ -2,10 +2,16 @@
 # UTILS
 alias ll='ls -la'
 
-# Vagrant 
+# Vagrant alias
 alias vag='cd /Users/b-engineer-takeuchi/Vagrant/CentOS65'
 alias lusc='cd /Users/b-engineer-takeuchi/Vagrant/lusc_vagrant'
 alias toshin='cd /Users/b-engineer-takeuchi/Vagrant/toshin'
+alias gacha='cd /Users/b-engineer-takeuchi/Vagrant/gacha'
+
+# Vagrant Commands
+alias check_box_list='vagrant box list'
+alias init_vagrant='vagrant init centos64' # centos64 is box name.
+
 
 # SSH
 alias bas='cd /Users/b-engineer-takeuchi/Desktop/others; ssh -i autopost-bastion-bastion.pem bastion@52.192.180.151'
