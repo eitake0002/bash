@@ -18,6 +18,6 @@ alias killju='pgrep jupyter | xargs kill -9'
 #### Python ####
 alias auto='cd /home/ec2-user/py/autopost'
 alias com='cd /home/ec2-user/py/autopost/management/commands'
-alias tools='cd /home/ec2-user/py/tools'
+#alias tools='cd /home/ec2-user/py/tools'
 alias rds='cd /home/ec2-user/py/tools/mysql'
 
