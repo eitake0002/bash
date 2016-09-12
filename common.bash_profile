@@ -71,7 +71,9 @@ alias show-dbs="mysql -u root -e 'show databases;'"
 function showtables(){
   mysql -u root $1 -e 'show tables;'
 }
-
+function mysql-version(){
+  mysql -u root -D mysql -e "SELECT version()"
+}
 ##### Git #####
 git config --global color.ui true
 
