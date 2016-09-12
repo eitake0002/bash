@@ -31,6 +31,7 @@ alias mig='cd /home/ec2-user/autopost/current/db/migrate/'
 alias tools='cd /home/ec2-user/autopost/current/tools/'
 alias log='cd /home/ec2-user/autopost/current/log'
 alias data='cd ~/autopost/current/data'
+alias sc='cd /home/ec2-user/autopost/current/scripts'
 
 # Spec
 alias spec='cd ~/autopost/current/spec'

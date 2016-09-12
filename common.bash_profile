@@ -29,6 +29,7 @@ alias bashedit-com='vim ~/bash_profile/common.bash_profile'
 alias bashedit-clo='vim ~/bash_profile/clorets.bash_profile'
 alias bashedit-ec='vim ~/bash_profile/ec_prod.bash_profile'
 alias bashedit-mac='vim ~/bash_profile/local-mac-pc.bash_profile'
+alias bashedit-py='vim ~/bash_profile/python.bash_profile'
 alias bs='cd ~/bash_profile'
 alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
 alias ll='ls -la --color=auto'
@@ -36,7 +37,7 @@ alias grep='grep --color'
 alias awk-tools='cd ~/bash_profile/awk_tools'
 
 # ssh
-alias vim-ssh-conf='vim ~/.ssh/config'
+alias ssh-config='vim ~/.ssh/config'
 
 # network. 
 alias global='curl inet-ip.info'
