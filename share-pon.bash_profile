@@ -83,28 +83,11 @@ function show-vote-data() {
   mysql -u root clorets_ar_dev -e 'select * from neta_movies'
   mysql -u root clorets_ar_dev -e 'select * from neta_votes'
 }
-function show-tro-data(){
-  mysql -u root clorets_ar_dev -e 'select * from trophies\G'
-}
-function show-tro-data-count(){
-  mysql -u root clorets_ar_dev -e 'select count(*) from trophies'
-}
-function del-tro-data(){
-  mysql -u root clorets_ar_dev -e 'delete from trophies'
-}
-function show-se-data(){
-  mysql -u root clorets_ar_dev -e 'select * from secret_lives\G'
-}
-function del-se-data(){
-  mysql -u root clorets_ar_dev -e 'delete from secret_lives'
-}
 function desc-tables(){
-  mysql -u root clorets_ar_dev -e 'desc neta_movies'
-  mysql -u root clorets_ar_dev -e 'desc neta_votes'
-  mysql -u root clorets_ar_dev -e 'desc secret_lives'
-  mysql -u root clorets_ar_dev -e 'desc trophies' 
+  mysql -u root share_gacha_development -e 'desc statuses'
+  mysql -u root share_gacha_development -e 'desc qr_codes'
 }
 function show-tables(){
-  mysql -u root clorets_ar_dev -e 'show tables;'
+  mysql -u root share_gacha_development -e 'show tables;'
 }
 
