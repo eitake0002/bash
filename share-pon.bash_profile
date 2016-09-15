@@ -30,7 +30,7 @@ alias app='cd /home/vagrant/share-pon'
 
 # controllers
 alias conts='cd /home/vagrant/share-pon/app/controllers'
-
+alias api='cd /home/vagrant/share-pon/app/controllers/api/v1'
 # admins
 alias admin='cd /home/vagrant/share-pon/app/admin'
 alias admin-ex='cd /home/vagrant/clorets-excalibur/app/admin'
