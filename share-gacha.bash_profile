@@ -64,6 +64,7 @@ alias vim-tro-con='vim /home/vagrant/share-gacha/app/controllers/site/trophy/sub
 alias vim-se-con='vim /home/vagrant/share-gacha/app/controllers/site/secret_live/subscriber_controller.rb'
 alias vim-seed='vim ~/share-gacha/db/seeds.rb'
 alias vim-car='vim /home/vagrant/share-gacha/config/initializers/carrierwave.rb'
+alias vim-routes='vim ~/share-gacha/config/routes.rb'
 
 # Web server
 alias run-webrick='cd /home/vagrant/share-gacha; bundle exec rails s -b 0.0.0.0'
@@ -86,6 +87,7 @@ function show-vote-data() {
 }
 function desc-tables(){
   mysql -u root share_gacha_development -e 'desc statuses'
+  mysql -u root $db_name -e 'desc gacha_statuses'
   mysql -u root share_gacha_development -e 'desc qr_codes'
 }
 function show-tables(){
@@ -93,5 +95,10 @@ function show-tables(){
 }
 function show-data(){
   mysql -u root $db_name -e 'select * from statuses'
+  mysql -u root $db_name -e 'select * from gacha_statuses'
   mysql -u root $db_name -e 'select * from qr_codes'
+}
+function update-data(){
+  mysql -u root $db_name -e 'update gacha_statuses set current_status = 1'
+  mysql -u root $db_name -e 'select * from gacha_statuses'
 }
