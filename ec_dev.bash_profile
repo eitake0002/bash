@@ -43,12 +43,16 @@ alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unic
 alias vim-ng-access-log='vim /var/log/nginx/access.log'
 
 # MySQL
+db_name=autopost_development
 function show-tables(){
   mysql -u root autopost_development -e 'show tables'
 }
 function desc-tables(){
   mysql -u root autopost_development -e 'desc articles'
   mysql -u root autopost_development -e 'desc crawl_sites'
+}
+function desc-table(){
+  mysql -u root $db_name -e "desc $1"
 }
 function show-art-data() {
   mysql -u root autopost_development -e 'select * from articles\G'
