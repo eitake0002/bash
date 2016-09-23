@@ -39,6 +39,9 @@ alias spec-lib='cd ~/autopost/current/spec/lib'
 
 alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
 
+# migration
+alias vim-seed='vim ~/autopost/current/db/seeds.rb'
+
 # Log 
 alias vim-ng-access-log='vim /var/log/nginx/access.log'
 
@@ -56,4 +59,11 @@ function desc-table(){
 }
 function show-art-data() {
   mysql -u root autopost_development -e 'select * from articles\G'
+}
+function del-art-data(){
+  mysql -u root $db_name -e 'delete from articles'
+  mysql -u root $db_name -e 'select * from articles'
+}
+function show-art-data(){
+  mysql -u root $db_name -e 'select * from articles\G'
 }
