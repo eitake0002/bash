@@ -7,6 +7,7 @@ alias vag='cd /Users/b-engineer-takeuchi/Vagrant/CentOS65'
 alias lusc='cd /Users/b-engineer-takeuchi/Vagrant/lusc_vagrant'
 alias toshin='cd /Users/b-engineer-takeuchi/Vagrant/toshin'
 alias gacha='cd /Users/b-engineer-takeuchi/Vagrant/gacha'
+alias eto='cd ~/Vagrant/eto-maker'
 
 # Vagrant Commands
 alias check_box_list='vagrant box list'
@@ -26,7 +27,7 @@ alias awskeys-auto='cd /Users/b-engineer-takeuchi/Dropbox/aws-keys/autopost'
 # VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make the bash prompt show that Canopy is active, otherwise 1
 alias activate_canopy="source '/Users/b-engineer-takeuchi/Library/Enthought/Canopy_64bit/User/bin/activate'"
 VIRTUAL_ENV_DISABLE_PROMPT=1 source '/Users/b-engineer-takeuchi/Library/Enthought/Canopy_64bit/User/bin/activate'
-alias awskeys='cd /Users/b-engineer-takeuchi/Dropbox/aws-keys/emr'
+alias awskeys='cd /Users/b-engineer-takeuchi/Dropbox/aws-keys/'
 
 ##### Toshin CHEF #####
 alias chefrepo='cd /Users/b-engineer-takeuchi/cl-toshin-owenedmedia-chef/'
