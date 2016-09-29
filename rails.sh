@@ -45,3 +45,6 @@ alias vim-seed='vim ~/autopost/current/db/seeds.rb'
 alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
 alias run-webrick='cd ~/$app_name/; bundle exec rails s -b 0.0.0.0'
 alias run-webrick-bg='cd ~/$app_name/; bundle exec rails s -b 0.0.0.0 &'
+alias kill-job(){
+  kill -9 "%$1"
+}

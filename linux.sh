@@ -1,14 +1,8 @@
 #!/bin/sh
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
-#------------
+#------------------------
 # OS settins
-#------------
-sudo hostname eto-maker-dev
+#------------------------
 
 # User specific environment and startup programs
 PATH=$PATH:$HOME/bin
@@ -18,7 +12,7 @@ eval "$(rbenv init -)"
 
 ##### Rails settings #####
 export RAILS_ENV=development
-export RAILS_APP=/home/ec2-user/autopost/current
+export RAILS_APP=/home/ec2-user/app
 export MECAB_PATH=/usr/lib64/libmecab.so.2
 
 ##### Prompt setting #####

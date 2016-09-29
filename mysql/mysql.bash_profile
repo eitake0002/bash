@@ -5,16 +5,22 @@ alias bashedit-mysql='vim ~/bash_profile/mysql/mysql.bash_profile'
 #----------------------------------
 # Access settings
 #----------------------------------
-
-export db_name=nenga-eto_development
-export host=localhost
-export port=3306
-export user=root
-export pass=''
+function setup(){
+  echo 'export db_name=database'
+  echo 'export host=localhost'
+  echo 'export port=3306'
+  echo 'export user=root'
+  echo 'export pass='
+}
 
 #----------------------------------
 # MySQL settings
 #----------------------------------
+
+# Check my.cnf places
+aliase check-my-conf='mysql --help | grep my.cnf'
+
+# Check mysql version.
 function mysql-version(){
   mysql -u root -D mysql -e "SELECT version()"
 }
