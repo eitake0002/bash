@@ -5,6 +5,10 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+##### Prompt setting #####
+host_name=`hostname`
+PS1="${host_name} \W$ "
+
 #------------
 # OS settins
 #------------
