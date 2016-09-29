@@ -5,6 +5,11 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+#------------
+# OS settins
+#------------
+sudo hostname eto-maker-dev
+
 # User specific environment and startup programs
 PATH=$PATH:$HOME/bin
 export PATH
