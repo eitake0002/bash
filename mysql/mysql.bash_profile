@@ -1,5 +1,7 @@
 #!/bin/sh
 
+alias bashedit-mysql='vim ~/bash_profile/mysql/mysql.bash_profile'
+
 #-----------------
 # Access settings
 #-----------------
@@ -25,10 +27,19 @@ alias show-dbs="mysql -u root -e 'show databases;'"
 #----------------
 # Table
 #----------------
+
+function base-command(){
+  mysql -h $host -P $port -u $user $db_name -e "$1"
+}
+
 function show-tables(){
-  mysql -u root $db_name -e 'show tables;'
+  base-command 'show tables'
+}
+
+function desc-table(){
+  base-command "desc $1"
 }
 
 function show-table-data(){
-  mysql -u $user $db_name -e "SELECT * FROM $1"
+  base-command "SELECT * FROM $1"
 }
