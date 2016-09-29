@@ -1,9 +1,17 @@
 #!/bin/sh
 
-#------------------------
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+##### Prompt setting #####
+host_name=`hostname`
+PS1="${host_name} \W$ "
+
+#------------
 # OS settins
 #------------------------
-
 # User specific environment and startup programs
 PATH=$PATH:$HOME/bin
 export PATH
