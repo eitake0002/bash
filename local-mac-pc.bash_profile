@@ -1,3 +1,4 @@
+#!/bin/sh
 
 # UTILS
 alias ll='ls -la'
