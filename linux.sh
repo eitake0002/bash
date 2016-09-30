@@ -1,6 +1,7 @@
 #!/bin/sh
 
-#bashedit-li='vim ~/bash_profile/linux.sh'
+# Edit this file.
+alias bashedit-li='vim ~/bash_profile/linux.sh'
 
 #----------------------------------
 # Common settings.
@@ -19,6 +20,29 @@ alias sr='cd ~; source ~/.bash_profile'
 export PATH=$PATH:$HOME/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+#----------------------------------
+# yum
+#----------------------------------
+function yum-ins(){
+  sudo yum -y install $1
+}
+
+alias yum-update='sudo yum -y update'
+
+function yum-rem(){
+  sudo yum -y remove $1
+}
+
+function yum-info(){
+  sudo yum info $1
+}
+
+alias yum-installed='sudo yum list installed'
+
+function yum-search(){
+  sudo yum search $1
+}
 
 #----------------------------------
 # ssh
