@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Edit this file.
 alias bashedit-mysql='vim ~/bash_profile/mysql.sh'
 
 #-----------------------------------------
@@ -10,7 +11,7 @@ alias bashedit-mysql='vim ~/bash_profile/mysql.sh'
 #export host=localhost
 #export port=3306
 #export user=root
-#export pass=
+#export pass=pass
 
 #-----------------------------------------
 # Install MySQL5.6
@@ -60,13 +61,37 @@ function show-dbs(){
 # Table
 #----------------------------------
 function show-tables(){
-  base-command 'show tables'
+  base-command "show tables"
 }
 
 function desc-table(){
   base-command "desc $1"
 }
 
-function show-table-data(){
+# Desc multiple tables.
+# ex: desc-tables table_1 table_2
+function desc-tables(){
+  for x in "$@"
+  do
+    base-command "desc $x"
+  done
+}
+
+# Desc all tables in database.
+function desc-all-tables(){
+  i=`expr 1`
+  for table in `show-tables`; do
+    if [ $i -ne 1 ]; then # Skip first row.
+      echo $table
+      base-command "desc $table"
+    fi
+    i=`expr $i + 1`
+  done
+}
+
+#-----------------------------------------
+# Select.
+#-----------------------------------------
+function sel-table-data(){
   base-command "SELECT * FROM $1"
 }
