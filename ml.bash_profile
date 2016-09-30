@@ -5,6 +5,10 @@
 export AWS_ACCESS_KEY_ID='AKIAIM2VA2DY252774HA'
 export AWS_SECRET_ACCESS_KEY='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'
 
+# cd alias
+alias ml='cd ~/ml'
+alias ds='cd ~/easy_data_science'
+
 # MySQL
 db_name=autopost_production
 host_name=autopost-production.coxocuskmguu.ap-northeast-1.rds.amazonaws.com

@@ -31,6 +31,8 @@ alias bashedit-share='vim ~/bash_profile/share-gacha.bash_profile'
 alias bashedit-ec='vim ~/bash_profile/ec_dev.bash_profile'
 alias bashedit-mac='vim ~/bash_profile/local-mac-pc.bash_profile'
 alias bashedit-py='vim ~/bash_profile/python.bash_profile'
+alias bashedit-ml='vim ~/bash_profile/ml.bash_profile'
+
 alias bs='cd ~/bash_profile'
 alias bashcp='cp ~/.bash_profile ~/bash_profile/bash_profile'
 alias ll='ls -la --color=auto'
