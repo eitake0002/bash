@@ -43,6 +43,17 @@ function my-version(){
   mysql -u root -D mysql -e "SELECT version()"
 }
 
+# Show global status.
+function global-status(){
+  base-command 'SHOW GLOBAL STATUS'
+}
+
+# Show global variables.
+function global-var(){
+  base-command 'SHOW GLOBAL VARIABLES'
+}
+
+# Check mysql charactors.
 function my-chars(){
   base-command "show variables like 'chara%'"
 }
