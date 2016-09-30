@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alias bashedit-mysql='vim ~/bash_profile/mysql/mysql.bash_profile'
+alias bashedit-mysql='vim ~/bash_profile/mysql.sh'
 
 #-----------------------------------------
 # Access settings

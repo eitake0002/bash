@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Edit this file
-alias bashedit-rails='vim ~/bash_profile/rails_common.bash_profile'
+alias bashedit-rails='vim ~/bash_profile/rails.sh'
 
 #----------------------------------
 # Settings.
@@ -13,10 +13,6 @@ eval "$(rbenv init -)"
 
 # Rails application name
 export app_name=eto-maker
-
-# AWS keys setting.
-export AWS_ACCESS_KEY_ID='AKIAIM2VA2DY252774HA'
-export AWS_SECRET_ACCESS_KEY='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'
 
 #----------------------------------
 # Frequently used directories
