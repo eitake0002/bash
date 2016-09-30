@@ -12,6 +12,16 @@ alias bashedit-mysql='vim ~/bash_profile/mysql/mysql.bash_profile'
 #export user=root
 #export pass=
 
+#-----------------------------------------
+# Install MySQL5.6
+#-----------------------------------------
+function my-install(){
+  sudo yum -y install http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+  sudo yum -y install mysql
+  sudo yum -y install mysql-devel
+  sudo yum -y install mysql-server
+  sudo yum -y install mysql-utilities
+}
 
 #----------------------------------
 # MySQL settings
