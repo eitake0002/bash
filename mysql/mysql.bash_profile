@@ -2,26 +2,26 @@
 
 alias bashedit-mysql='vim ~/bash_profile/mysql/mysql.bash_profile'
 
-#----------------------------------
+#-----------------------------------------
 # Access settings
-#----------------------------------
-function setup(){
-  echo 'export db_name=database'
-  echo 'export host=localhost'
-  echo 'export port=3306'
-  echo 'export user=root'
-  echo 'export pass='
-}
+# Paste below variables in ~/.bash_profile
+#-----------------------------------------
+#export db_name=database
+#export host=localhost
+#export port=3306
+#export user=root
+#export pass=
+
 
 #----------------------------------
 # MySQL settings
 #----------------------------------
 
 # Check my.cnf places
-aliase check-my-conf='mysql --help | grep my.cnf'
+alias my-conf='mysql --help | grep my.cnf'
 
 # Check mysql version.
-function mysql-version(){
+function my-version(){
   mysql -u root -D mysql -e "SELECT version()"
 }
 
@@ -30,6 +30,13 @@ function mysql-version(){
 #----------------------------------
 function base-command(){
   mysql -h $host -P $port -u $user $db_name -e "$1"
+}
+
+#----------------------------------
+# Connect to DB server
+#---------------------------------- 
+function my-connect(){
+  mysql -h $host -P $port -u $user $db_name
 }
 
 #----------------------------------
