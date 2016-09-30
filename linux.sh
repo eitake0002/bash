@@ -33,7 +33,19 @@ alias global='curl inet-ip.info'
 #----------------------------------
 # Process
 #----------------------------------
-alias ps=ps
+
+# Get process id with name
+# ex: get-pid rails
+function get-pid(){
+  ps -e -o pid,cmd | grep $1 | grep -v grep | awk '{ print $1 }'
+}
+
+# Kill process with above get-pid function.
+# ex: kill-pid rails
+function kill-pid(){
+  process_id=`ps -e -o pid,cmd | grep $1 | grep -v grep | awk '{ print $1 }'`
+  kill -9 $process_id
+}
 
 #----------------------------------
 # Storage
