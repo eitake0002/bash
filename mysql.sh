@@ -25,6 +25,13 @@ function my-install(){
 }
 
 #----------------------------------
+# Base command
+#----------------------------------
+function base-command(){
+  mysql -h $host -P $port -u $user $db_name -e "$1"
+}
+
+#----------------------------------
 # MySQL settings
 #----------------------------------
 
@@ -36,11 +43,8 @@ function my-version(){
   mysql -u root -D mysql -e "SELECT version()"
 }
 
-#----------------------------------
-# Base command
-#----------------------------------
-function base-command(){
-  mysql -h $host -P $port -u $user $db_name -e "$1"
+function my-chars(){
+  base-command "show variables like 'chara%'"
 }
 
 #----------------------------------
@@ -95,3 +99,4 @@ function desc-all-tables(){
 function sel-table-data(){
   base-command "SELECT * FROM $1"
 }
+
