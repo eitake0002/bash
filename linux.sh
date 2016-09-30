@@ -33,29 +33,30 @@ alias global='curl inet-ip.info'
 #----------------------------------
 # Process
 #----------------------------------
+alias ps=ps
 
 #----------------------------------
 # Storage
 #----------------------------------
+function disc-size(){
+  df -hm
+}
 
 #----------------------------------
 # Memory
 # ----------------------------------
-# sleep count. 
-
+function mem-size(){
+  free -m
+}
 #----------------------------------
 # Search
 # ----------------------------------
-
 # Search file/diretory name.
 function fi(){
   find / -name $1
 }
+
 # Search word in multiple files
 function fin() {
   find ./ -type f -print | xargs grep $2
 }
-
-##### Git #####
-git config --global color.ui true
-
