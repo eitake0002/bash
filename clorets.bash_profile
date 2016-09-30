@@ -55,6 +55,10 @@ alias se-views='cd /home/vagrant/clorets-ar/app/views/site/secret_live/subscribe
 alias sub-views='cd /home/vagrant/clorets-ar/app/views/site/trophy/subscriber'
 alias se-sub-views='cd /home/vagrant/clorets-ar/app/views/site/secret_live/subscriber'
 
+# helpers
+alias helpers='cd /home/vagrant/clorets-ar/app/helpers'
+alias com-helper='vim ~/clorets-ar/app/helpers/site/common_helper.rb'
+
 # models
 alias models='cd /home/vagrant/clorets-ar/app/models'
 alias models-ex='cd /home/vagrant/clorets-excalibur/app/models'
@@ -118,11 +122,16 @@ function show-se-data(){
 function del-se-data(){
   mysql -u root clorets_ar_dev -e 'delete from secret_lives'
 }
+function show-q-data(){
+  mysql -u root clorets_ar_dev -e 'select * from trophy_questions'
+  mysql -u root clorets_ar_dev -e 'select * from secret_live_questions'
+}
 function desc-tables(){
   mysql -u root clorets_ar_dev -e 'desc neta_movies'
   mysql -u root clorets_ar_dev -e 'desc neta_votes'
   mysql -u root clorets_ar_dev -e 'desc secret_lives'
-  mysql -u root clorets_ar_dev -e 'desc trophies' 
+  mysql -u root clorets_ar_dev -e 'desc trophies'
+  mysql -u root clorets_ar_dev -e 'desc trophy_questions' 
 }
 function show-tables(){
   mysql -u root clorets_ar_dev -e 'show tables;'
