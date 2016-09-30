@@ -58,6 +58,11 @@ function my-chars(){
   base-command "show variables like 'chara%'"
 }
 
+# Show datatime
+function my-datetime(){
+  base-command "SELECT CURRENT_DATE()"
+}
+
 #----------------------------------
 # Connect to DB server
 #---------------------------------- 
