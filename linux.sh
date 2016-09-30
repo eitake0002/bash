@@ -29,6 +29,7 @@ alias ssh-config='vim ~/.ssh/config'
 # Network 
 #----------------------------------
 alias global='curl inet-ip.info'
+alias check-open-port='netstat -an | grep LISTEN'
 
 #----------------------------------
 # Process
@@ -51,7 +52,7 @@ function kill-pid(){
 # Storage
 #----------------------------------
 function disc-size(){
-  df -hm
+  df -h
 }
 
 #----------------------------------
@@ -60,6 +61,7 @@ function disc-size(){
 function mem-size(){
   free -m
 }
+
 #----------------------------------
 # Search
 # ----------------------------------
