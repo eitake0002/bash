@@ -3,6 +3,9 @@
 # Edit this file.
 alias bashedit-li='vim ~/bash_profile/linux.sh'
 
+# Move to bash_profile
+alias bs='cd ~/bash_profile'
+
 #----------------------------------
 # Common settings.
 #----------------------------------
