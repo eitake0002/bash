@@ -1,0 +1,7 @@
+# Copy and paste below to ~/.bash_profile
+
+export rails_app_name=app
+
+. ./bash_profile/linux.sh
+. ./bash_profile/mysql.sh
+. ./bash_profile/rails.sh
