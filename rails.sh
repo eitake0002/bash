@@ -33,7 +33,7 @@ alias spec-lib='cd ~/autopost/current/spec/lib'
 # Frequently used files
 #----------------------------------
 alias vim-routes='vim ~/$rails_app_name/config/routes.rb'
-alias vim-seed='vim ~/autopost/current/db/seeds.rb'
+alias vim-seed='vim ~/$rails_app_name/db/seeds.rb'
 
 #----------------------------------
 # Server commands
