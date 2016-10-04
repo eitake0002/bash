@@ -19,6 +19,7 @@ eval "$(rbenv init -)"
 #----------------------------------
 alias app='cd ~/$rails_app_name/'
 alias conts='cd ~/$rails_app_name/app/controllers/'
+alias conc='cd ~/$rails_app_name/app/controllers/concerns'
 alias models='cd ~/$rails_app_name/app/models/'
 alias views='cd ~/$rails_app_name/app/views/'
 alias admin='cd ~/$rails_app_name/app/admin/'
