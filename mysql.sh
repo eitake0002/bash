@@ -112,7 +112,17 @@ function desc-all-tables(){
 #-----------------------------------------
 # Select.
 #-----------------------------------------
-function sel-table-data(){
+
+# Select table.
+function sel(){
   base-command "SELECT * FROM $1"
 }
 
+# Select table with where.
+# param1: table_name
+# param2: column
+# param3: value
+# ex: sel-wh users id 1
+funct ion sel-wh(){
+  base-command "SELECT * FROM $1 WHERE $2 = $3"
+}
