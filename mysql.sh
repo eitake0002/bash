@@ -168,14 +168,15 @@ function sel-ord-a(){
 # param3: value  : default = 1
 # Ex: case-simple users id 1
 function case-simple(){
-  column=`[ $2 ] && $2 || echo "id"`
-  value=`[ $3 ] && $3 ||  echo "1"`
+  column=`[ $2 ] && echo "$2" || echo "id"`
+  value=`[ $3 ] && echo "$3" ||  echo "1"`
 
   base-command "
     SELECT
       (
-        CASE WHEN $column = 1 THEN 'yes'
-             ELSE 'no' END
+        CASE $2 
+          WHEN $3 THEN 'yes'
+          ELSE 'no' END
       )
     FROM $1
   "
