@@ -125,6 +125,14 @@ function sel(){
   base-command "SELECT * FROM $1"
 }
 
+# Select table with specified column.
+# param1: table_name
+# param2: column
+# Ex: sel-col users id
+function sel-col(){
+  base-command "SELECT $2 FROM $1"
+}
+
 # Select table with where clause.
 # param1: table_name
 # param2: column
@@ -133,4 +141,5 @@ function sel(){
 function sel-wh(){
   base-command "SELECT * FROM $1 WHERE $2 = $3"
 }
+
 
