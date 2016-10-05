@@ -130,6 +130,6 @@ function sel(){
 # param2: column
 # param3: value
 # ex: sel-wh users id 1
-funct ion sel-wh(){
+function sel-wh(){
   base-command "SELECT * FROM $1 WHERE $2 = $3"
 }
