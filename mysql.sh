@@ -158,6 +158,14 @@ function sel-ord-a(){
   base-command "SELECT * FROM $1 ORDER BY $2 ASC"
 }
 
+# Select table with group by.
+# param1: table_name
+# param2: column
+# Ex: sel-grp users created_at
+function sel-grp(){
+  base-command "SELECT * FROM $1 GROUP BY $2"
+}
+
 #-----------------------------------------
 # Case
 #-----------------------------------------
@@ -166,7 +174,7 @@ function sel-ord-a(){
 # param1: table_name
 # param2: column : default = id
 # param3: value  : default = 1
-# Ex: case-simple users id 1
+# Ex: case-simple users name mike
 function case-simple(){
   column=`[ $2 ] && echo "$2" || echo "id"`
   value=`[ $3 ] && echo "$3" ||  echo "1"`
