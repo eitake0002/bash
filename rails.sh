@@ -19,6 +19,7 @@ eval "$(rbenv init -)"
 #----------------------------------
 alias app='cd ~/$rails_app_name/'
 alias conts='cd ~/$rails_app_name/app/controllers/'
+alias conc='cd ~/$rails_app_name/app/controllers/concerns'
 alias models='cd ~/$rails_app_name/app/models/'
 alias views='cd ~/$rails_app_name/app/views/'
 alias admin='cd ~/$rails_app_name/app/admin/'
@@ -33,7 +34,7 @@ alias spec-lib='cd ~/autopost/current/spec/lib'
 # Frequently used files
 #----------------------------------
 alias vim-routes='vim ~/$rails_app_name/config/routes.rb'
-alias vim-seed='vim ~/autopost/current/db/seeds.rb'
+alias vim-seed='vim ~/$rails_app_name/db/seeds.rb'
 
 #----------------------------------
 # Server commands
