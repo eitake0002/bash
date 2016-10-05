@@ -70,7 +70,7 @@ function get-pid(){
 
 # Kill process with above get-pid function.
 # ex: kill-pid rails
-function kill-pid(){
+function kill-proc(){
   process_id=`ps -e -o pid,cmd | grep $1 | grep -v grep | awk '{ print $1 }'`
   kill -9 $process_id
 }
