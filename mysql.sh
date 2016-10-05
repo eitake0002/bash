@@ -142,4 +142,18 @@ function sel-wh(){
   base-command "SELECT * FROM $1 WHERE $2 = $3"
 }
 
+# Select table with desc order.
+# param1: table_name
+# param2: column
+# Ex: sel-ord-d users id
+function sel-ord-d(){
+  base-command "SELECT * FROM $1 ORDER BY $2 DESC"
+}
 
+# Select table with asc order.
+# param1: table_name
+# param2: column
+# Ex: sel-ord-a users id
+function sel-ord-a(){
+  base-command "SELECT * FROM $1 ORDER BY $2 ASC"
+}
