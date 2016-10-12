@@ -109,6 +109,6 @@ function fi(){
 }
 
 # Search word in multiple files
-function fin() {
-  find ./ -type f -print | xargs grep $2
+function search-word() {
+  find ./ -type f -print | xargs grep "$1"
 }
