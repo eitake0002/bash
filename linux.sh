@@ -28,6 +28,17 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 #----------------------------------
+# ssh
+#----------------------------------
+function vag-ssh-config(){
+  vagrant ssh-config
+}
+
+function vag-scp(){
+  scp -r $1 vagrant@$2:~/
+}
+
+#----------------------------------
 # yum
 #----------------------------------
 function yum-ins(){

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Edit this file.
-alias bashedit-mysql='vim ~/bash_profile/mysql.sh'
+alias edit-mysql='vim ~/bash_profile/mysql.sh'
 
 #-----------------------------------------
 # Access settings
@@ -123,6 +123,18 @@ function my-qry(){
 # Select table.
 function sel(){
   base-command "SELECT * FROM $1"
+}
+
+# Select all tables.
+function sel-all-tables(){
+  i=`expr 1`
+  for table in `show-tables`; do
+    if [ $i -ne 1 ]; then # Skip first row.
+      echo $table
+      base-command "SELECT * FROM $table"
+    fi
+    i=`expr $i + 1`
+  done
 }
 
 # Select table with specified column.
