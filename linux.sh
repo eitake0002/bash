@@ -113,12 +113,12 @@ function mem-size(){
 # show process memory size
 function process-mem-size(){
   echo "MEM  : VSZ : RSS : COMMAND"
-  ps aux | grep $1 | awk '{print $4 "% :", $5/1000000 "vsz(MB) :", $6/1000000 "rss(MB) :", $11}'
+  ps aux | grep $1 | awk '{print $4 "% :", $5/1000 "vsz(MB) :", $6/1000 "rss(MB) :", $11}'
 }
 
 # show process total memory size
 function process-mem-total(){
-  ps aux | grep $1 | awk '{sum += $6}END{print sum/1000000}'
+  ps aux | grep $1 | awk '{sum += $6}END{print sum/1000}'
 }
 
 #------------------------------------------------------------
