@@ -67,7 +67,7 @@ function yum-search(){
 alias ssh-config='vim ~/.ssh/config'
 
 #------------------------------------------------------------
-# Network 
+# network 
 #------------------------------------------------------------
 alias global='curl inet-ip.info'
 alias check-open-port='netstat -an | grep LISTEN'
@@ -104,10 +104,21 @@ function file-size(){
 }
 
 #------------------------------------------------------------
-# Memory
+# memory
 #------------------------------------------------------------
 function mem-size(){
-  free -m
+  free -tm
+}
+
+# show process memory size
+function process-mem-size(){
+  echo "MEM  : VSZ : RSS : COMMAND"
+  ps aux | grep $1 | awk '{print $4 "% :", $5/1000000 "vsz(MB) :", $6/1000000 "rss(MB) :", $11}'
+}
+
+# show process total memory size
+function process-mem-total(){
+  ps aux | grep $1 | awk '{sum += $6}END{print sum/1000000}'
 }
 
 #------------------------------------------------------------
