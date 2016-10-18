@@ -36,6 +36,16 @@ function show-app-names(){
   return 0
 }
 
+# sysnopsic:
+#   switch rails_app_name env. and show list after switching.
+# options:
+#   first: number of rails_app.
+function switch-app(){
+  export rails_app_name=${rails_app_name_list[$1 - 1]}
+  show-app-names
+  return 0
+}
+
 # ----------------------------------
 # Edit this file
 # ----------------------------------
