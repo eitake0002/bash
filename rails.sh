@@ -10,7 +10,7 @@ export rails_app_name=${rails_app_name_list[0]}
 COM
 
 # ----------------------------------
-# switch app name
+# rails app.
 # ----------------------------------
 
 # synopsis:
@@ -18,7 +18,7 @@ COM
 #
 # description:
 #   show rails app list and check current app "*".
-function show-app-names(){
+function show-app-list(){
 
   # loop app_name_rails_list.
   i=1
