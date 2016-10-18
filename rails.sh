@@ -1,18 +1,36 @@
 #!/bin/sh
 
+# ----------------------------------
+# How to use.
+# Paste below in ~/.bash_profile.
+# ----------------------------------
+<< COM
+export rails_app_name=rails_app_name
+COM
+
+# ----------------------------------
+# switch app name
+# ----------------------------------
+
+# synopsis:
+#   show rails_app_name.
+function check-app-name(){
+  echo $rails_app_name
+  return 0
+}
+
+# ----------------------------------
 # Edit this file
+# ----------------------------------
+
 alias bashedit-rails='vim ~/bash_profile/rails.sh'
 
 #----------------------------------
-# Settings.
+# read rbenv
 #----------------------------------
 
-# Load rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-# Rails application name
-# export rails_app_name=clorets-ar
 
 #----------------------------------
 # Frequently used directories
