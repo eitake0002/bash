@@ -5,7 +5,8 @@
 # Paste below in ~/.bash_profile.
 # ----------------------------------
 << COM
-export rails_app_name=rails_app_name
+export rails_app_name_list=(rails_app_name_1 rails_app_name_2)
+export rails_app_name=${rails_app_name_list[0]}
 COM
 
 # ----------------------------------
@@ -13,9 +14,13 @@ COM
 # ----------------------------------
 
 # synopsis:
-#   show rails_app_name.
-function check-app-name(){
-  echo $rails_app_name
+#   show rails_app_names.
+function show-app-names(){
+  i=1
+  for item in ${rails_app_name_list[@]}; do
+    echo "${i} : " ${item}
+    i=$(( i + 1 ))
+  done
   return 0
 }
 
