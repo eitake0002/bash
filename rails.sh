@@ -15,10 +15,22 @@ COM
 
 # synopsis:
 #   show rails_app_names.
+#
+# description:
+#   show rails app list and check current app "*".
 function show-app-names(){
+
+  # loop app_name_rails_list.
   i=1
   for item in ${rails_app_name_list[@]}; do
-    echo "${i} : " ${item}
+
+    # check current app_name.
+    if [ $rails_app_name = $item ]; then
+      echo "${i} : " ${item} "*"
+    else
+      echo "${i} : " ${item}
+    fi
+
     i=$(( i + 1 ))
   done
   return 0
