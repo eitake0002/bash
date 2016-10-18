@@ -42,7 +42,7 @@ function show-app-list(){
 #   first: number of rails_app.
 function switch-app(){
   export rails_app_name=${rails_app_name_list[$1 - 1]}
-  show-app-names
+  show-app-list
   return 0
 }
 
