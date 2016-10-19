@@ -40,7 +40,7 @@ function show-app-list(){
 #   switch rails_app_name env. and show list after switching.
 # options:
 #   first: number of rails_app.
-function switch-app(){
+function sw-app(){
   export rails_app_name=${rails_app_name_list[$1 - 1]}
   show-app-list
   return 0
