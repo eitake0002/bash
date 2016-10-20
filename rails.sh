@@ -78,6 +78,11 @@ alias models='cd ~/$rails_app_name/app/models/'
 # views
 alias views='cd ~/$rails_app_name/app/views/'
 
+# assets
+alias assets='cd ~/$rails_app_name/app/assets'
+alias js='cd ~/$rails_app_name/app/assets/javascripts'
+alias css='cd ~/$rails_app_name/app/assets/stylesheets'
+
 # active admin app/admin
 alias admin='cd ~/$rails_app_name/app/admin/'
 
