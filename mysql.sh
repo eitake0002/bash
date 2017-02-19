@@ -125,6 +125,11 @@ function sel(){
   base-command "SELECT * FROM $1"
 }
 
+# select table data with \G.
+function selg(){
+  base-command "SELECT * FROM $1\G"
+}
+
 # Select all tables.
 function sel-all-tables(){
   i=`expr 1`

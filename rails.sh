@@ -1,18 +1,63 @@
 #!/bin/sh
 
+# ----------------------------------
+# How to use.
+# Paste below in ~/.bash_profile.
+# ----------------------------------
+<< COM
+export rails_app_name_list=(rails_app_name_1 rails_app_name_2)
+export rails_app_name=${rails_app_name_list[0]}
+COM
+
+# ----------------------------------
+# rails app.
+# ----------------------------------
+
+# synopsis:
+#   show rails_app_names.
+#
+# description:
+#   show rails app list and check current app "*".
+function show-app-list(){
+
+  # loop app_name_rails_list.
+  i=1
+  for item in ${rails_app_name_list[@]}; do
+
+    # check current app_name.
+    if [ $rails_app_name = $item ]; then
+      echo "${i} : " ${item} "*"
+    else
+      echo "${i} : " ${item}
+    fi
+
+    i=$(( i + 1 ))
+  done
+  return 0
+}
+
+# sysnopsic:
+#   switch rails_app_name env. and show list after switching.
+# options:
+#   first: number of rails_app.
+function sw-app(){
+  export rails_app_name=${rails_app_name_list[$1 - 1]}
+  show-app-list
+  return 0
+}
+
+# ----------------------------------
 # Edit this file
+# ----------------------------------
+
 alias bashedit-rails='vim ~/bash_profile/rails.sh'
 
 #----------------------------------
-# Settings.
+# read rbenv
 #----------------------------------
 
-# Load rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-# Rails application name
-# export rails_app_name=clorets-ar
 
 #----------------------------------
 # Frequently used directories
@@ -32,6 +77,11 @@ alias models='cd ~/$rails_app_name/app/models/'
 
 # views
 alias views='cd ~/$rails_app_name/app/views/'
+
+# assets
+alias assets='cd ~/$rails_app_name/app/assets'
+alias js='cd ~/$rails_app_name/app/assets/javascripts'
+alias css='cd ~/$rails_app_name/app/assets/stylesheets'
 
 # active admin app/admin
 alias admin='cd ~/$rails_app_name/app/admin/'
@@ -66,6 +116,6 @@ alias vim-seed='vim ~/$rails_app_name/db/seeds.rb'
 #----------------------------------
 # Server commands
 #----------------------------------
-alias restart-unicorn='cd /home/ec2-user/autopost/current/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
+alias restart-unicorn='cd ~/$rails_app_name/tools/unicorn; sh unicorn.sh stop; sh unicorn.sh start'
 alias run-webrick='cd ~/$rails_app_name/; bundle exec rails s -b 0.0.0.0'
 alias run-webrick-bg='cd ~/$rails_app_name/; bundle exec rails s -b 0.0.0.0 &'
