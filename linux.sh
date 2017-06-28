@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# aaaa
 # Edit this file.
 alias bashedit-li='vim ~/bash_profile/linux.sh'
 
