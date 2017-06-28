@@ -57,6 +57,24 @@ function git-diff-staging()
   git diff --cached
 }
 
+# Add all
+function git-add()
+{
+  git add -A
+}
+
+# Add file
+function git-add-file()
+{
+  git add $1
+}
+
+# Update cache status
+function git-add-update()
+{
+  git add . --update
+}
+
 function check-remote-url()
 {
   git remote -v
