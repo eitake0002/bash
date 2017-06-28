@@ -79,3 +79,9 @@ function git-reset-hard-id()
 {
   git reset --hard $1
 }
+
+# Check ssh connection
+function get-ssh-connection-check()
+{
+  ssh -T git@github.com
+}
