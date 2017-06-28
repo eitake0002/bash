@@ -12,6 +12,12 @@ function git-set-email()
   git config --global user.email "$2"
 }
 
+# Set color.
+function git-set-color()
+{
+  git config --global color.ui true
+}
+
 # Show config list
 function git-config-list()
 {
