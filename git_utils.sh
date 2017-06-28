@@ -54,3 +54,20 @@ function set-remote-url()
   git remote set-url origin $1
 }
 
+# Reset.
+function git-reset-hard()
+{
+  git reset --hard HEAD
+}
+
+# Reset to before
+function git-reset-hard-before()
+{
+  git reset --hard HEAD^
+}
+
+# Reset to ID.
+function git-reset-hard-id()
+{
+  git reset --hard $1
+}
