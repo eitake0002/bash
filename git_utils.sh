@@ -1,13 +1,21 @@
 #!/bin/sh
 
+# Set git user.name
 function git-set-username()
 {
   git config --global user.name "$1"
 }
 
+# Set git user.email
 function git-set-email()
 {
   git config --global user.email "$2"
+}
+
+# Show config list
+function git-config-list()
+{
+  git config --list
 }
 
 # Show git log oneliner
