@@ -1,5 +1,15 @@
 #!/bin/sh
 
+function git-set-username()
+{
+  git config --global user.name "$1"
+}
+
+function git-set-email()
+{
+  git config --global user.email "$2"
+}
+
 function git-log-oneline()
 {
   git log --oneline
