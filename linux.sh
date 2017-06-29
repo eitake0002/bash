@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# aaaa
 # Edit this file.
 alias bashedit-li='vim ~/bash_profile/linux.sh'
 
@@ -21,12 +20,21 @@ PS1="`hostname` \W$ "
 alias sr='cd ~; source ~/.bash_profile'
 
 #----------------------------------
-# OS settins
+# System(OS)
 #----------------------------------
 # Add ruby command
 export PATH=$PATH:$HOME/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Description:
+#   Check OS version on RHEL(AWS).
+# Usage:
+#   check-os-version
+function check-os-version()
+{
+  cat /etc/system-release
+}
 
 #----------------------------------
 # ssh
@@ -63,11 +71,6 @@ function yum-search(){
 }
 
 #------------------------------------------------------------
-# ssh
-#------------------------------------------------------------
-alias ssh-config='vim ~/.ssh/config'
-
-#------------------------------------------------------------
 # network 
 #------------------------------------------------------------
 alias global='curl inet-ip.info'
@@ -91,24 +94,6 @@ function kill-proc(){
 }
 
 #------------------------------------------------------------
-# Storage
-#------------------------------------------------------------
-function disc-size(){
-  df -h
-}
-
-#------------------------------------------------------------
-# file/directory
-#------------------------------------------------------------
-function file-size(){
-  ls -lh $1
-}
-
-function rmo(){
-  mv $1 ~/trash/
-}
-
-#------------------------------------------------------------
 # memory
 #------------------------------------------------------------
 function mem-size(){
@@ -126,16 +111,3 @@ function process-mem-total(){
   ps aux | grep $1 | awk '{sum += $6}END{print sum/1000}'
 }
 
-#------------------------------------------------------------
-# Search
-#------------------------------------------------------------
-
-# Search file/diretory name.
-function fi(){
-  find / -name $1
-}
-
-# Search word in multiple files
-function search-word() {
-  find ./ -type f -print | xargs grep "$1"
-}
