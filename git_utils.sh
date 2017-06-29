@@ -24,6 +24,12 @@ function git-config-list()
   git config --list
 }
 
+# Set default repository url, then you can push only with "git push"
+function git-config-set-default-url()
+{
+  git config --global push.default simple
+}
+
 # Show git log oneliner
 function git-log-oneline()
 {
