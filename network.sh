@@ -4,6 +4,15 @@
 # Network command
 #------------------------------------
 
+# Description:
+#   Exec arp all command.
+# Usage:
+#   arp-all
+function arp-all()
+{
+  arp -a
+}
+
 # Routing setting.
 function route-add()
 {
