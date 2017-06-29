@@ -36,6 +36,24 @@ function check-os-version()
   cat /etc/system-release
 }
 
+# Description:
+#   Check OS architecture.
+# Usage:
+#   check-os-arch
+function check-os-arch()
+{
+  arch
+}
+
+# Description:
+#   Check OS info.
+# Usage:
+#   check-os-info
+function check-os-info()
+{
+  uname -a
+}
+
 #----------------------------------
 # ssh
 #----------------------------------
