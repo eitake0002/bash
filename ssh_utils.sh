@@ -33,3 +33,12 @@ function scp-get()
   dir=$4
   scp -r -i ${key_pass} ${user}@${host}:${dir} ./
 }
+
+# Description:
+#   Create rsa key.
+# Usage:
+#   create-rsa-key
+function create-rsa-key()
+{
+  ssh-keygen -t rsa
+}
