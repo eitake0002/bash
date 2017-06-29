@@ -68,6 +68,17 @@ function vag-scp(){
 #----------------------------------
 # yum
 #----------------------------------
+
+# Description:
+#   Install epel repository on RHEL7.0 or later.
+# Usage:
+#   yum-add-epel
+function yum-add-epel()
+{
+  wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  rpm -ivh epel-release-latest-7.noarch.rpm
+}
+
 function yum-ins(){
   sudo yum -y install $1
 }
@@ -82,7 +93,10 @@ function yum-info(){
   sudo yum info $1
 }
 
-alias yum-installed='sudo yum list installed'
+function yum-list-installed()
+{
+  yum list installed
+}
 
 function yum-search(){
   sudo yum search $1
