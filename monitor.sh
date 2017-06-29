@@ -40,3 +40,15 @@ function htop-exe()
   htop
 }
 
+# Install cpulimit.
+function install-cpulimit()
+{
+  yum -y install cpulimit
+}
+
+# Set cpu limitation.
+function cpulimit-show(){
+    echo 'cpulimit -l <percentage> -p <process_id>'
+    echo 'cpulimit -l 80 -p 21906'
+}
+
