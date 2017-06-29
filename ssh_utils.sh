@@ -43,6 +43,20 @@ function create-rsa-key()
   ssh-keygen -t rsa
 }
 
+# Show no pass access setting process.
+function no-pass-access()
+{
+  echo '# Client.'
+  echo '1. ssh-keygen -t rsa'
+  echo '2. cat ~/.ssh/id_rsa.pub # memo'
+  echo '3. chmod 600 ~/.ssh/id_rsa.pub'
+  echo '# Server'
+  echo '4. echo <copied_key> >> ~/.ssh/authorized_keys'
+  echo '5. chmod 600 authorized_keys'
+  echo '# Client'
+  echo 'ssh <user>@<host>'
+}
+
 # Install pssh with yum.
 function install-pssh()
 {
