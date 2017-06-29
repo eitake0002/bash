@@ -42,3 +42,19 @@ function create-rsa-key()
 {
   ssh-keygen -t rsa
 }
+
+# Install pssh with yum.
+function install-pssh()
+{
+  yum -y install pssh
+}
+
+# Description:
+#   Exec commad on remote server.
+#   * You must set key and connect without password beforehand.
+function pssh-exec-on-remote()
+{
+  host=$1
+  exec_command=$2
+  pssh -H ${host} -i ${exec_command}
+}
