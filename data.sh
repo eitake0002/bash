@@ -52,6 +52,18 @@ function create-text-data()
 }
 
 # Description:
+#   Generate one line random string.
+# Usage:
+#   generate-random-data <string num>
+# Example:
+#   generate-random-data 10
+function generate-random-data()
+{
+  string_num=$1
+  cat /dev/urandom | base64 | fold -w ${string_num} | head -n 1
+}
+
+# Description:
 #   Generate random string.
 # Usage:
 #   generate-random-string <string num> <line num>
