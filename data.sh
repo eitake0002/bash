@@ -11,6 +11,17 @@ function create-num-data()
   seq $1
 }
 
+# Description:
+#   Crete num data with 0 padding.
+# Usage:
+#   create-num-data-with-padding <number_of_lines>
+# Example:
+#   create-num-data-with-padding 100
+function create-num-data-with-padding()
+{
+  seq -w $1
+}
+
 
 # Description:
 #   Create test data with text.
