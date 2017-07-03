@@ -14,7 +14,7 @@ alias bs='cd ~/bash_profile'
 #----------------------------------
 
 # Set prompt name
-PS1="`hostname` \W$ "
+# PS1="`hostname` \W$ "
 
 # Read .bash_profile
 alias sr='cd ~; source ~/.bash_profile'
