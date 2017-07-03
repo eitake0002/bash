@@ -22,6 +22,17 @@ function create-num-data-with-padding()
   seq -w $1
 }
 
+# Description:
+#   Create num data with fixec 0 padding.
+# Usage:
+#   create-num-data-with-padding-fixed 05 100
+function create-num-data-with-padding-fixed()
+{
+  padding_num=$1
+  line_nums=$2
+  seq -f %${padding_num}g ${line_nums}
+}
+
 
 # Description:
 #   Create test data with text.
