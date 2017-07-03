@@ -1,6 +1,9 @@
 #!/bin/sh
 
-# Install speedmeter.
+# Description:
+#   Install speedmeter.
+# Usage:
+#   install-speedmeter
 function install-speedmeter()
 {
   yum -y install python-urwid
@@ -10,45 +13,65 @@ function install-speedmeter()
   chmod 755 /usr/local/bin/speedometer 
 }
 
-# Monitor eth1, eth0.
-function check-speedmeter()
+# Description:
+#   Monitor eth1, eth0.
+# Usage:
+#   monitor-eth
+function monitor-eth()
 {
-  check-speedmeter='speedmeter -rx eth0 -tx eth0 -rx eth1 -tx eth1'
+  speedmeter -rx eth0 -tx eth0 -rx eth1 -tx eth1
 }
 
-# Install dstat
+# Description:
+#   Install dstat.
+# Usage:
+#   install-dstat
 function install-dstat()
 {
   yum -y install dstat
 }
 
-# Show main resources with dstat.
-function dstat-mains()
+# Description:
+#   Monitoring main resources on linux with dstat command.
+# Usage:
+#   dstat-main
+function dstat-main()
 {
   dstat -tclndmsp
 }
 
-# Install htop.
+# Description:
+#   Install htop.
+# Usage:
+#   install-htop
 function install-htop()
 {
   yum -y install htop
 }
 
-# Execute htop.
-function htop-exe()
+# Description:
+#   Execute htop.
+# Usage:
+#   exec-htop
+function exec-htop()
 {
   htop
 }
 
-# Install cpulimit.
+# Description:
+#   Install cpulimit. When process cpu resource must be limited, using.
+# Usage:
+#   install-copulimit
 function install-cpulimit()
 {
   yum -y install cpulimit
 }
 
-# Set cpu limitation.
-function cpulimit-show(){
+# Description:
+#   Show cpulimit main usage.
+# Usage:
+#   show-usage-cpulimit
+function show-usage-cpulimit(){
     echo 'cpulimit -l <percentage> -p <process_id>'
     echo 'cpulimit -l 80 -p 21906'
 }
-
