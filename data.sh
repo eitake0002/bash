@@ -50,3 +50,16 @@ function create-text-data()
         echo "$i,${txt}"; i=$(expr $i + 1);
     done
 }
+
+# Description:
+#   Generate random string.
+# Usage:
+#   generate-random-string <string num> <line num>
+# Example:
+#   generate-random-string 10 20
+function generate-random-string()
+{
+  number_of_string=$1
+  number_of_lines=$2
+  cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${number_of_string} | head -n ${number_of_lines} | sort | uniq
+}
